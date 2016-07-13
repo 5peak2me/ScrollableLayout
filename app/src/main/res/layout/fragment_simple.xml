@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.cpoopc.scrollablelayoutlib.ScrollableLayout
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ed7612"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#cdcdcd"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <com.test.cp.myscrolllayout.TabPageIndicator
+                android:id="@+id/tab"
+                style="@style/StyleTab"
+                app:tpi_indicatorColor="#ed7612"
+                app:tpi_indicatorHeight="2dp"
+                app:tpi_indicatorMode="wrap_content"
+                app:tpi_mode="fixed" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/imagepager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="nihao" />
+
+        </LinearLayout>
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/pagerStrip"
+            style="@style/StyleTab"
+            app:pstsDividerColor="@android:color/transparent"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsUnderlineColor="#000"
+            app:pstsUnderlineHeight="1dp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.cpoopc.scrollablelayoutlib.ScrollableLayout>
+</RelativeLayout>
